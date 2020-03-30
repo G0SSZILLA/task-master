@@ -15,8 +15,14 @@ class ListService {
         let index = _store.State.lists.findIndex(list => list.id == listId)
         _store.State.lists.splice(index, 1)
         _store.saveState()
-        console.log('delete');
+    }
 
+    deleteTask(listId, taskId) {
+        let list = _store.State.lists.find(l => l.id == listId)
+        let task = list.tasks.find(t => t.id == taskId)
+        let index = list.tasks.indexOf(task)
+        list.tasks.splice(index, 1)
+        _store.saveState()
     }
 
     create(newListData) {

@@ -31,9 +31,19 @@ export default class ListController {
     }
 
     delete(listId) {
-        _listService.delete(listId)
+        if (confirm('do you want to delete this list?')) {
+            _listService.delete(listId)
+        }
         _drawLists()
     }
+
+    deleteTask(listId, taskId) {
+        if (confirm('do you want to delete this list?')) {
+            _listService.deleteTask(listId, taskId)
+        }
+        _drawLists()
+    }
+
 
     addTask(event, listId) {
         event.preventDefault()

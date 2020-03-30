@@ -11,14 +11,14 @@ export default class Task {
     getTemplate(listId) {
         return /*html*/ `
     <dd>
-    <button type="button" class="close text-danger" onclick="app.ListController.deleteTask('${listId}','${this.id}')">
+    <button type="button" class="close text-danger" onclick="app.listController.deleteTask('${listId}','${this.id}')">
       <span>&times;</span>
       </button>
-      <h3 class="mt-5" >${this.title}
-      <div class="form-check">
-      <input type="checkbox" class="form-check-input d-flex shadow" id="materialUnchecked">
-      <label class="form-check-label" for="materialUnchecked"></label>
-      </div></h4>
+      <!-- Material unchecked -->
+<div class="form-check">
+<input type="checkbox" class="form-check-input bg-info my-3 d-flex ml-5" id="materialUnchecked">
+<label class="form-check-label"><h3>${this.title}<h3></label>
+</div>
       </dd>
     `
     }

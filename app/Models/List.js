@@ -14,7 +14,7 @@ export default class List {
     get Template() {
         return /*html*/ `
   <div class="col-3 m-auto border border-warning rounded shadow bg-white">
-  <button type="button" class="close text-danger" onclick="app.listController.delete('${this.id}')f">
+  <button type="button" class="close text-danger" onclick="app.listController.delete('${this.id}')">
 <span>&times;</span>
 </button>
   <h1>${this.title}</h1>
@@ -29,7 +29,7 @@ export default class List {
           <label for="taskName"></label>
           <input type="text" name="taskName" class="form-control" placeholder="Type a task here"aria-describedby="helpId">
       </div>
-  </form>
+  </form >
 </div>`
     }
 
