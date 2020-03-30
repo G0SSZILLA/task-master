@@ -14,12 +14,13 @@ export default class Task {
     <button type="button" class="close text-danger" onclick="app.listController.deleteTask('${listId}','${this.id}')">
       <span>&times;</span>
       </button>
+      <h3>${this.title}<h3>
       <!-- Material unchecked -->
-<div class="form-check">
-<input type="checkbox" class="form-check-input bg-info my-3 d-flex ml-5" id="materialUnchecked">
-<label class="form-check-label"><h3>${this.title}<h3></label>
-</div>
       </dd>
+      <div class="form-check">
+      <input type="checkbox" class="form-check-input bg-info mb-2 d-flex ml-5" id="materialUnchecked">
+<label class="form-check-label"></label>
+</div>
     `
     }
 }
